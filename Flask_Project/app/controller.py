@@ -12,9 +12,9 @@ def index():
 @app.route ('/', methods=['POST'])
 def index_post():
 #         text = request. form ['user_name']
-        form = UserNameForm ()
-        if form.validate_on_submit ():
-        text = form.UserNameField.data
-        return render_template ("index.html", form = form, user_name = text);
-else:
-        return "Bad form"
+        form = UserNameForm()
+        if form.validate_on_submit():
+                text = form.UserNameField.data
+                return render_template ("index.html", form = form, user_name = text);
+        else:
+                return "Bad form"
